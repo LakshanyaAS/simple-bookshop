@@ -59,4 +59,4 @@ python manage.py runserver
 
 ## 🎥 Demo Video
 
-👉 [Click here to watch the demo](https://drive.google.com/file/d/1WI2JVn9LnAHdahBOS3Kk2egx6KYoPQVe/view?usp=sharing)
+👉 [Click here to watch the demo](https://youtu.be/fQOFk3Cf2MQ)
