@@ -55,7 +55,8 @@ python manage.py createsuperuser
 python manage.py runserver
 
 
-##########
-Demo Video
-#########
-https://drive.google.com/file/d/1WI2JVn9LnAHdahBOS3Kk2egx6KYoPQVe/view?usp=sharing
+
+
+## 🎥 Demo Video
+
+👉 [Click here to watch the demo](https://drive.google.com/file/d/1WI2JVn9LnAHdahBOS3Kk2egx6KYoPQVe/view?usp=sharing)
