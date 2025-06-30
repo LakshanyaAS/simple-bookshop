@@ -54,3 +54,8 @@ python manage.py createsuperuser
 # 5. Run the development server
 python manage.py runserver
 
+
+##########
+Demo Video
+#########
+https://drive.google.com/file/d/1WI2JVn9LnAHdahBOS3Kk2egx6KYoPQVe/view?usp=sharing
