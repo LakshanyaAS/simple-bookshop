@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+  {% block ptitle %}
+<title>homepage</title>
+{% endblock %}
+  {% block content %}
+
+
+
+
+<div class="container mt-5">
+
+  
+  <div class="text-center mb-5">
+    <h1 class="display-4 fw-bold">Welcome to Bookstore </h1>
+    <p class="lead fst-italic mt-3">"A room without books is like a body without a soul." — Marcus Tullius Cicero</p>
+    <a href="{% url 'books' %}" class="btn btn-primary btn-lg mt-3">Explore Our Collection</a>
+  </div>
+
+  
+  <div class="row justify-content-center mb-5">
+    <div class="col-md-8">
+      <div class="card shadow-sm p-4" style="background-color: #fff5f8;">
+        <h3 class="mb-3">About Us</h3>
+        <p>
+          At Bookstore, we believe in the power of stories. Our platform connects readers with a rich and diverse collection of books 
+          from talented authors and trusted publishers. Whether you're into fiction, non-fiction, science, or literature — we have it all.
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="text-center mt-4">
+    <h4>Start your reading journey today!</h4>
+    
+  </div>
+
+</div>
+{% endblock %}

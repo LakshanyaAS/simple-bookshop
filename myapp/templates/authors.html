@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+  {% block ptitle %}
+<title>authors</title>
+{% endblock %}
+  {% block content %}
+  
+  <h3>Authors</h3>
+  <table class="table table-hover">
+<thead>
+            <tr>
+                <th>Author Name</th>
+                <th>Email</th>
+                <th>Phone Number</th>                
+                <th>Location</th>
+                <th>Books</th>
+                {% if user.is_superuser %}
+                <th>Action</th>
+                {%endif%}               
+                
+                
+            </tr>
+</thead>
+            {% for i in authors %}
+
+            <tr>
+                <td>{{i.name}}</td>
+                <td>{{i.email}}</td>
+                <td>{{i.phone}}</td>
+                <td>{{i.location}}</td>
+                <td>
+                {% if i.books.all %}
+            {% for book in i.books.all %}
+              {{ book.title }}{% if not forloop.last %}, {% endif %}
+            {% endfor %}
+          {% else %}
+            No books
+          {% endif %}
+        </td>
+        {% if user.is_superuser %}
+        <td><a href="{% url 'editauthor' i.id %}"  class="btn btn-warning btn-sm">Edit</a>
+         <a href="{% url 'deleteauthor' i.id %}" class="btn btn-danger btn-sm">Delete</a></td>
+        {%endif%}       
+             
+            </tr>
+
+            {% endfor %}
+        </table>
+        {% endblock %}

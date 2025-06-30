@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+  {% block ptitle %}
+<title>books</title>
+{% endblock %}
+  {% block content %}
+  
+  <h3>Books</h3>
+  <table class="table table-hover">
+    <thead>
+            <tr>
+                <th>Book Title</th>
+                <th>Genre</th>
+                <th>No of pages</th>                
+                <th>Author</th>
+                <th>Publisher</th>
+                <th>Price</th>
+                {% if user.is_superuser %}
+                <th>Action</th>
+                {%endif%}
+            </tr>
+</thead>
+            {% for i in book %}
+
+            <tr>
+                <td>{{i.title}}</td>
+                <td>{{i.genre}}</td>
+                <td>{{i.numpages}}</td>
+                <td>{{i.author}}</td>
+                <td>{{i.publisher}}</td>
+                <td>{{i.price}}</td>
+                {% if user.is_superuser %}
+                <td>
+                <a href="{% url 'editbook' i.id %}" class="btn btn-warning btn-sm">Edit</a>
+                <a href="{% url 'deletebook' i.id %}" class="btn btn-danger btn-sm">Delete</a>
+            </td>
+             {%endif%}
+            </tr>
+
+            {% endfor %}
+        </table>
+        {% endblock %}

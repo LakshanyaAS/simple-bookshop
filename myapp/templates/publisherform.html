@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block formcontent %}
+<h2>{{ form.instance.id|yesno:"Edit Publisher,Add Publisher" }}</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>
+<a href="{% url 'publishers' %}">Back to Publisher List</a>
+{% endblock %}
